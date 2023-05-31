@@ -16,7 +16,7 @@
       <div id="movies">
         <% if @movies.any? %>
           <% @movies.each do |movie| %>
-            <h4><%= movie.title %></h4>
+            <h4><%= movie.title %> - <small>(<%= movie.director.first_name %> <%= movie.director.last_name %>)</small></h4>
             <p><%= movie.synopsis %></p>
           <% end %>
         <% else %>
