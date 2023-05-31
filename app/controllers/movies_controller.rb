@@ -20,7 +20,8 @@ class MoviesController < ApplicationController
             # OR directors.last_name @@ :query
             # SQL
             # @movies = @movies.joins(:director).where(sql_subquery, query: params[:query])
-
+            
+            # @movies = Movie.global_search(params[:query])
         end
     end
 end
